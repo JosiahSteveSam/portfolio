@@ -1,0 +1,118 @@
+{
+  "openTo": "",
+  "headline": {
+    "lead": "Software engineer building",
+    "emphasis": "retrieval, agent and OCR systems",
+    "tail": "that run in production."
+  },
+  "seeWork": "See the work",
+  "toDesk": "There’s a canvas version of this site",
+  "toDeskBadge": "desktop only",
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "work": "Work",
+    "contact": "Contact",
+    "desk": "The desk",
+    "sectionsLabel": "Sections",
+    "topLabel": "Top of page",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "backToTop": "Back to top"
+  },
+  "resume": {
+    "short": "Résumé",
+    "long": " PDF ↓"
+  },
+  "theme": {
+    "toDark": "Switch to dark",
+    "toLight": "Switch to light"
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "About",
+    "portraitPending": "Portrait goes here",
+    "portraitAlt": "Josiah Steve Sam"
+  },
+  "portraitEgg": {
+    "taps": 10,
+    "question": "What's 2 + 2?",
+    "inputLabel": "Your answer",
+    "submit": "Answer",
+    "wrong": "Nope. Try again.",
+    "dismiss": "Never mind",
+    "answers": [
+      "4",
+      "four"
+    ],
+    "caption": "Off duty",
+    "hiddenAlt": "Josiah Steve Sam, off duty",
+    "flipBack": "Flip back"
+  },
+  "skills": {
+    "eyebrow": "Toolbox",
+    "title": "What I build with"
+  },
+  "experience": {
+    "eyebrow": "Experience",
+    "title": "Where I've been",
+    "indexLabel": "Roles",
+    "expand": "Show details",
+    "collapse": "Hide details"
+  },
+  "work": {
+    "eyebrow": "Selected work",
+    "title": "Five systems, shipped",
+    "lede": "Each has a full write-up: what it does, the numbers and the stack.",
+    "readMore": "Read the write-up",
+    "shotPending": "No screenshot yet"
+  },
+  "credentials": {
+    "eyebrow": "The rest of it",
+    "title": "Education",
+    "education": "Education",
+    "awards": "Awards",
+    "writing": "Writing"
+  },
+  "closer": {
+    "eyebrow": "Contact",
+    "title": "Let's build\nsomething.",
+    "body": "Based in Chennai and open to relocation. Email is the fastest way to reach me.",
+    "plainVersion": "Plain text version"
+  },
+  "door": {
+    "title": "There’s a second version of this site.",
+    "body": "The same portfolio as a canvas: draggable cards, a terminal and a few games.",
+    "scores": "Some of it keeps score.",
+    "hidden": "A few things are hidden.",
+    "action": "Open the canvas",
+    "note": "Desktop only."
+  },
+  "footer": {
+    "note": "Thanks for reading.",
+    "inspiredLead": "Built on",
+    "inspiredShell": "portfolio-canvas",
+    "inspiredShellUrl": "https://github.com/aahil-khan/portfolio-canvas",
+    "inspiredShellFor": "by Aahil Khan (MIT licence).",
+    "inspiredJoin": "Design inspired by",
+    "inspiredSurface": "aahil-khan.xyz",
+    "inspiredSurfaceUrl": "https://aahil-khan.xyz",
+    "inspiredSurfaceFor": "(which credits yevtam.com and ajvadlaseen.com)",
+    "inspiredRest": "Content is Josiah’s."
+  },
+  "desk": {
+    "exit": "The site",
+    "tabSuffix": "the canvas"
+  },
+  "workPage": {
+    "allWork": "All work",
+    "home": "Home",
+    "indexTitle": "Work",
+    "indexLede": "Every project as its own page, linkable and readable without JavaScript.",
+    "whatItDoes": "What it does",
+    "builtWith": "Built with",
+    "shots": "Screenshots",
+    "backToWork": "Back to all work"
+  }
+}

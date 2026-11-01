@@ -1,0 +1,19 @@
+{
+  "updated": "2026-11",
+  "lede": "What I’m working on.",
+  "items": [
+    {
+      "label": "Role",
+      "what": "Software Engineer (AI) at Credentech Solutions, Chennai."
+    },
+    {
+      "label": "Building",
+      "what": "Full-stack AI products: RAG pipelines with evaluation and guardrails, and agentic workflows with LangChain and LangGraph."
+    },
+    {
+      "label": "Open to",
+      "what": "Relocation."
+    }
+  ],
+  "foot": ""
+}

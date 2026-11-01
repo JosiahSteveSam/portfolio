@@ -1,0 +1,114 @@
+[
+  {
+    "slug": "credentra",
+    "name": "Credentra Agents",
+    "tagline": "An AI agent builder for any business",
+    "year": 2026,
+    "kind": "Product",
+    "meta": "Credentech Solutions · B2B SaaS",
+    "lede": "A B2B SaaS where any business builds and publishes its own AI agents on a website widget, a chat page and WhatsApp.",
+    "highlights": [
+      "Decoupled **channel adapters** from one conversation runtime, so all three channels run the same agent.",
+      "Hybrid Qdrant retrieval fused via **RRF** and a cross-encoder reranker raised hit@1 from **0.77 to 0.95**, for **~90%** grounded-answer accuracy at **~2s** latency.",
+      "Every model call goes through a gateway with rate limits, **NeMo guardrails** and fallbacks, plus a citation fence that fails closed: unsafe or off-policy responses cut **~30%**.",
+      "Tenant data isolated across **22 PostgreSQL tables** (17 Alembic migrations) with row-level security, composite workspace keys and RBAC (3 roles, 13 permissions).",
+      "Self-serve ingestion of text, FAQs, files and websites, with versioned revisions that go live only after an automated check: new-tenant setup cut from days to **~1 hour**.",
+      "Tenant and admin portals in Next.js and React, an embeddable Shadow-DOM chat widget, and a FastAPI backend of **63 REST endpoints** streaming replies over SSE through a JWT API proxy.",
+      "Human takeover with a live inbox and a report grouping unanswered questions: critical-issue response time cut **~40%**, time to find content gaps cut **~50%**."
+    ],
+    "stack": [
+      "Next.js",
+      "React",
+      "FastAPI",
+      "PostgreSQL",
+      "Qdrant",
+      "LiteLLM",
+      "Docker"
+    ]
+  },
+  {
+    "slug": "apb-kyc-ocr",
+    "name": "OCR & KYC pipeline",
+    "tagline": "Identity documents for APB Bank, Laos",
+    "year": 2025,
+    "kind": "System",
+    "meta": "Credentech Solutions · APB Bank, Laos",
+    "lede": "A GPU-accelerated OCR pipeline that reads passports, national IDs and family cards for a bank in Laos.",
+    "highlights": [
+      "**~95%** field-extraction accuracy on **500+** KYC documents a day.",
+      "Automated image correction and GPU-accelerated field extraction on NVIDIA L4 GPUs.",
+      "Fault-tolerant multi-node inference with automatic **GPU-to-CPU failover** behind FastAPI microservices and Nginx: **~99%** uptime in production.",
+      "APIs secured with OAuth2 and JWT."
+    ],
+    "stack": [
+      "FastAPI",
+      "PostgreSQL",
+      "Nginx",
+      "Python"
+    ]
+  },
+  {
+    "slug": "taco-bell-invoice-ocr",
+    "name": "OCR invoice automation",
+    "tagline": "Thai and English invoices for Taco Bell Thailand",
+    "year": 2025,
+    "kind": "System",
+    "meta": "Credentech Solutions · Taco Bell Thailand",
+    "lede": "Mixed Thai and English invoice processing, run on the client’s own infrastructure to keep financial data private.",
+    "highlights": [
+      "**~95%** per-document accuracy across **5 invoice templates**, combining open-source OCR (Typhoon OCR) with rule-based field mapping.",
+      "A monitoring dashboard with review and Excel export for the finance team.",
+      "Deployed on-premises, so financial data never leaves the client."
+    ],
+    "stack": [
+      "Python",
+      "FastAPI",
+      "React",
+      "Vite",
+      "PostgreSQL"
+    ]
+  },
+  {
+    "slug": "tourexc",
+    "name": "TourExc",
+    "tagline": "A travel and tourism booking platform",
+    "year": 2025,
+    "kind": "Product",
+    "meta": "Credentech Solutions · Travel",
+    "lede": "Customer, agent and admin workflows for tour packages, bookings, leads and cross-country pricing.",
+    "highlights": [
+      "Built the **customer, agent and admin** workflows across tour packages, bookings, leads and cross-country pricing.",
+      "A **B2B agent portal** where partners manage their clients’ bookings.",
+      "Admin tooling for multimedia listings and taxi bookings."
+    ],
+    "stack": [
+      "React",
+      "Vite",
+      "Next.js",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL"
+    ]
+  },
+  {
+    "slug": "cbse-learning",
+    "name": "CBSE learning platform",
+    "tagline": "AI tutors and answer-sheet grading",
+    "year": 2026,
+    "kind": "Product",
+    "meta": "Freelance · Co-founding engineer",
+    "lede": "An AI-powered learning platform for CBSE students, shipped end to end as a 2-month MVP.",
+    "highlights": [
+      "Curriculum-grounded AI subject tutors via **RAG**, personalised per class and subject.",
+      "A learning-assessment engine tracking **25 CBSE-aligned parameters** (Bloom’s Taxonomy, metacognition), with rule-based and LLM-assisted scoring.",
+      "An OCR and LLM grading workflow for answer sheets cut estimated manual grading effort by **~50%**.",
+      "Owned the backend, AI services, frontend and deployment of the **2-month MVP** on Render, iterated on live demo-user feedback."
+    ],
+    "stack": [
+      "FastAPI",
+      "React",
+      "Next.js",
+      "Supabase"
+    ]
+  }
+]

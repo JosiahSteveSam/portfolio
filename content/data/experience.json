@@ -1,0 +1,77 @@
+{
+  "jobs": [
+    {
+      "slug": "credentech-ai",
+      "role": "Software Engineer (AI)",
+      "company": "Credentech Solutions",
+      "period": "Apr 2026 – present",
+      "year": 2026,
+      "meta": "Credentech Solutions · Chennai · Apr 2026 – present",
+      "lede": "Own architecture decisions across retrieval, inference and multi-tenant trade-offs.",
+      "highlights": [
+        "Standardized design patterns now used across **2+ production services**.",
+        "Build full-stack AI products end to end: Next.js and React frontends, FastAPI services and REST APIs, PostgreSQL data models, and **RAG pipelines with evaluation and guardrails**.",
+        "Design and prototype **agentic workflows** (LangChain, LangGraph, tool calling) and evaluate production feasibility ahead of platform roadmap decisions.",
+        "Lead client-facing technical scoping for AI and full-stack deployments, and mentor an incoming engineer on RAG pipeline design and production debugging."
+      ],
+      "stack": [
+        "Next.js",
+        "React",
+        "FastAPI",
+        "PostgreSQL",
+        "LangChain",
+        "LangGraph"
+      ]
+    },
+    {
+      "slug": "credentech-junior",
+      "role": "Junior Software Engineer",
+      "company": "Credentech Solutions",
+      "period": "Feb 2025 – Apr 2026",
+      "year": 2025,
+      "meta": "Credentech Solutions · Chennai · Feb 2025 – Apr 2026",
+      "lede": "Delivered **4 client projects** across banking, SaaS, food and beverage, and travel.",
+      "highlights": [
+        "Covered frontend, backend, AI services and deployment on every project.",
+        "Built React and Next.js frontends and FastAPI and Node.js/Express backends on PostgreSQL, progressing from feature work to **independent end-to-end ownership**.",
+        "Developed OCR and document-intelligence services with LLM-based extraction, validation and structured JSON output, including **GPU inference with automated failover**.",
+        "Secured APIs with OAuth2 and JWT, and built a PostgreSQL audit trail that reduced log-investigation effort by **~40%**."
+      ],
+      "stack": [
+        "React",
+        "Next.js",
+        "FastAPI",
+        "Node.js",
+        "Express.js",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "slug": "quelit",
+      "role": "Data Science Intern",
+      "company": "Quelit",
+      "period": "Jul – Dec 2024",
+      "year": 2024,
+      "meta": "Quelit · Chennai · Jul – Dec 2024",
+      "lede": "Regression pipelines and a persona-consistent chatbot.",
+      "highlights": [
+        "An end-to-end **regression pipeline** in Python (EDA, validation, encoding, feature preprocessing) to predict student academic performance, comparing Scikit-learn models on R², RMSE and MAE.",
+        "Reusable ingestion, training and prediction pipelines.",
+        "A **persona-consistent chatbot** (OpenAI API, Streamlit, MongoDB) with conversation storage and analytics logging."
+      ],
+      "stack": [
+        "Python",
+        "OpenAI API",
+        "MongoDB"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Vellore Institute of Technology",
+      "degree": "Integrated M.Sc., Computational Statistics and Data Analytics",
+      "detail": "CGPA 7.64 · Sept 2020 – May 2025"
+    }
+  ],
+  "awards": []
+}

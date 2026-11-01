@@ -1,0 +1,48 @@
+{
+  "profile": {
+    "name": "Josiah Steve Sam",
+    "initials": "JS",
+    "resumePdf": "/josiah-steve-sam-resume.pdf",
+    "role": {
+      "prefix": "Software engineer,",
+      "emphasis": "AI and full-stack systems"
+    },
+    "location": "Chennai, India",
+    "availability": "Open to relocation",
+    "email": "josiahsteve29@gmail.com",
+    "intro": "I build production web platforms, backend services and AI applications: RAG, agentic workflows and document OCR, across SaaS, banking, travel and EdTech.",
+    "notes": [
+      "Software Engineer (AI) at Credentech Solutions in Chennai since April 2026. I own architecture decisions across retrieval, inference and multi-tenant trade-offs, lead client-facing technical scoping, and mentor an incoming engineer on RAG pipeline design and production debugging.",
+      "Before that, as a Junior Software Engineer there, I delivered 4 client projects across banking, SaaS, food and beverage, and travel, covering frontend, backend, AI services and deployment.",
+      "I studied for an Integrated M.Sc. in Computational Statistics and Data Analytics at Vellore Institute of Technology, and started in industry as a data science intern at Quelit."
+    ],
+    "links": [
+      {
+        "label": "GitHub",
+        "href": "https://github.com/JosiahSteveSam"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/josiah-ds/"
+      },
+      {
+        "label": "Email",
+        "href": "mailto:josiahsteve29@gmail.com"
+      }
+    ]
+  },
+  "headlineStats": [
+    {
+      "value": "2+",
+      "label": "years in production"
+    },
+    {
+      "value": "4",
+      "label": "client projects delivered"
+    },
+    {
+      "value": "0.95",
+      "label": "retrieval hit@1, up from 0.77"
+    }
+  ]
+}

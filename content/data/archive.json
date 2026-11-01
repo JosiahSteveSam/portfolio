@@ -1,0 +1,25 @@
+[
+  {
+    "id": "credentra-reranker",
+    "kind": "built",
+    "title": "A cross-encoder reranker for Credentra",
+    "when": "Credentech Solutions",
+    "meta": "hit@1 0.77 → 0.95",
+    "note": "Hybrid Qdrant retrieval fused via RRF, then reranked. Grounded-answer accuracy reached ~90% at ~2s."
+  },
+  {
+    "id": "postgres-audit-trail",
+    "kind": "built",
+    "title": "A PostgreSQL audit trail",
+    "when": "Credentech Solutions",
+    "note": "Reduced log-investigation effort by ~40%."
+  },
+  {
+    "id": "quelit-chatbot",
+    "kind": "built",
+    "title": "A persona-consistent chatbot",
+    "when": "Jul – Dec 2024",
+    "meta": "Quelit · OpenAI API, Streamlit, MongoDB",
+    "note": "With conversation storage and analytics logging."
+  }
+]
