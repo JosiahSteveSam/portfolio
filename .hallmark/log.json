@@ -1,0 +1,32 @@
+[
+ {
+  "shape": "folio of numbered entries on a visible twelve-column grid",
+  "theme": "custom",
+  "axes": "light/grotesk-heavy/warm",
+  "hero": "name stacked in three lines across eight columns, 4:5 mono photo slot on the last four",
+  "nav": "running head, wordmark with a red full stop, section links and Contact",
+  "footer": "email set huge over four contact columns and credits",
+  "imagery": "photographs, library 1 stand-in (portrait slot), mono",
+  "photos": [
+   "Virginia_Tech_-_data_center.jpg"
+  ],
+  "entry": "index strip then numbered entries, one figure each",
+  "fingerprint": "grid-paper/heavy-name/entries/pipeline-diagram/table/colophon",
+  "sections": [
+   "hero",
+   "work",
+   "engineering",
+   "experience",
+   "about",
+   "footer"
+  ],
+  "signature": "the name set huge beside the photo on grid paper",
+  "waived": [
+   "49b",
+   "77"
+  ],
+  "prompt": "custom editorial folio portfolio for Josiah Steve Sam",
+  "date": "2026-11-01",
+  "mode": "build"
+ }
+]

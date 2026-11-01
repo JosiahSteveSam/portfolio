@@ -1,16 +1,157 @@
 ---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { site, heroStandIn } from '../data/site';
+
+const entries = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
+
+const pipeline = [
+  { n: '1', name: 'Query' },
+  { n: '2', name: 'Four branches in Qdrant', branches: ['Dense', 'FAQ', 'Sparse', 'Exact code'] },
+  { n: '3', name: 'RRF fusion' },
+  { n: '4', name: 'PostgreSQL authorization' },
+  { n: '5', name: 'Cross-encoder rerank' },
+  { n: '6', name: 'Answer behind a citation fence', end: true },
+];
+
+const practice = [
+  { name: 'Retrieval (RAG)', proof: 'Hybrid search and reranking; curriculum-grounded tutors.' },
+  { name: 'Agentic AI', proof: 'LangGraph and LangChain, tool calling, structured outputs.' },
+  { name: 'OCR and documents', proof: 'Bank KYC, Thai and English invoices, answer sheets.' },
+  { name: 'Backend and cloud', proof: '63 endpoints over SSE, row-level security, GPU failover.' },
+];
+
+const roles = [
+  { role: 'Software Engineer (AI)', company: 'Credentech Solutions', from: 'Apr 2026', to: 'present', line: 'Owns retrieval, inference and multi-tenant architecture; mentors a new engineer.' },
+  { role: 'Junior Software Engineer', company: 'Credentech Solutions', from: 'Feb 2025', to: 'Apr 2026', line: '4 client projects end to end; audit effort cut ~40%.' },
+  { role: 'Data Science Intern', company: 'Quelit', from: 'Jul 2024', to: 'Dec 2024', line: 'Persona chatbot for 20+ users; NLP over 2,000+ messages.' },
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Base
+  title="Josiah Steve Sam, AI and software engineer"
+  description="Josiah Steve Sam builds retrieval, agent and OCR systems in production, from Chennai, India."
+>
+  <section class="hero container" aria-labelledby="hero-name">
+    <div class="hero__text">
+      <h1 class="hero__name" id="hero-name">Josiah<br />Steve<br />Sam</h1>
+      <p class="hero__line">AI engineer and software engineer shipping retrieval, agents and OCR to production.</p>
+      <div class="hero__actions">
+        <a class="btn" href="#work">Selected work</a>
+        <a class="btn btn--quiet" href={site.resumePrimary}>Resume</a>
+      </div>
+    </div>
+    <figure class="hero__photo" data-slot="portrait" data-alt="Josiah Steve Sam, black-and-white portrait, 4:5, head and shoulders">
+      <img
+        src={heroStandIn.src}
+        sizes="(min-width: 60rem) 32vw, 100vw"
+        width={heroStandIn.width}
+        height={heroStandIn.height}
+        alt={heroStandIn.alt}
+        style="object-position: 50% 50%"
+        fetchpriority="high"
+      />
+    </figure>
+  </section>
+
+  <section class="work container" id="work" aria-labelledby="work-head">
+    <h2 id="work-head" class="section-head">Four shipped systems</h2>
+    <ol class="index" aria-label="Entries">
+      {entries.map((e) => (
+        <li>
+          <a href={`#entry-${e.data.number}`}>
+            <span class="index__num">{e.data.number}</span>
+            <span class="index__name">{e.data.title}</span>
+          </a>
+        </li>
+      ))}
+    </ol>
+
+    {entries.map((e) => (
+      <article class="entry" id={`entry-${e.data.number}`} aria-labelledby={`entry-${e.data.number}-title`}>
+        <div class="entry__meta">
+          <p class="entry__num">{e.data.number}</p>
+          <p class="entry__client">{e.data.client}</p>
+          <ul class="entry__stack" aria-label="Stack">
+            {e.data.stack.map((s) => <li>{s}</li>)}
+          </ul>
+        </div>
+        <div class="entry__body">
+          <h3 class="entry__title" id={`entry-${e.data.number}-title`}>{e.data.title}</h3>
+          <p class="entry__kind">{e.data.kind}</p>
+          <p class:list={['entry__figure', { 'entry__figure--words': e.data.figureWords }]} data-reveal>{e.data.figure}</p>
+          <div class="entry__caption">
+            <p class="entry__label">{e.data.figureLabel}</p>
+            <a class="entry__link" href={`/work/${e.id}/`}>Read the case study<span class="visually-hidden">: {e.data.title}</span></a>
+          </div>
+        </div>
+      </article>
+    ))}
+  </section>
+
+  <section class="engineering" id="engineering" aria-labelledby="eng-head">
+    <div class="container">
+      <h2 id="eng-head" class="section-head">How Credentra finds an answer</h2>
+      <figure class="pipeline" aria-label="Diagram of Credentra's retrieval pipeline">
+        <ol class="pipeline__stages">
+          {pipeline.map((s) => (
+            <li class:list={['stage', { 'stage--branches': s.branches, 'stage--end': s.end }]}>
+              <span class="stage__n">{s.n}</span>
+              <span class="stage__name">{s.name}</span>
+              {s.branches && (
+                <ul class="stage__branches">
+                  {s.branches.map((b) => <li>{b}</li>)}
+                </ul>
+              )}
+            </li>
+          ))}
+        </ol>
+        <figcaption class="pipeline__result">
+          <span class="pipeline__figure">~90%</span>
+          <span class="pipeline__label">grounded answers, at ~2s a reply</span>
+        </figcaption>
+      </figure>
+
+      <dl class="practice">
+        {practice.map((p) => (
+          <div>
+            <dt>{p.name}</dt>
+            <dd>{p.proof}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="experience container" id="experience" aria-labelledby="exp-head">
+    <h2 id="exp-head" class="section-head">Three roles in Chennai</h2>
+    <table class="roles">
+      <thead>
+        <tr><th scope="col">Role</th><th scope="col">Company</th><th scope="col">Dates</th><th scope="col">Contribution</th></tr>
+      </thead>
+      <tbody>
+        {roles.map((r) => (
+          <tr>
+            <th scope="row" data-label="Role">{r.role}</th>
+            <td data-label="Company">{r.company}</td>
+            <td data-label="Dates" class="roles__dates"><time>{r.from}</time> to {r.to === 'present' ? 'present' : <time>{r.to}</time>}</td>
+            <td data-label="Contribution">{r.line}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </section>
+
+  <section class="about container" id="about" aria-labelledby="about-head">
+    <div class="about__text">
+      <h2 id="about-head" class="section-head">Statistics at VIT, AI in Chennai</h2>
+      <p>An integrated M.Sc. in Computational Statistics and Data Analytics, then 2+ years shipping for banking, SaaS, travel and EdTech.</p>
+      <p><span class="fill" data-fill="about">Josiah’s approach and interests, in his words</span></p>
+    </div>
+    <dl class="colophon">
+      <div><dt>Based in</dt><dd>Chennai, India</dd></div>
+      <div><dt>Relocation</dt><dd>Open</dd></div>
+      <div><dt>Education</dt><dd>VIT, <span class="nums">2020</span> to <span class="nums">2025</span></dd></div>
+    </dl>
+  </section>
+</Base>

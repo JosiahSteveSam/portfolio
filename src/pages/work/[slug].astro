@@ -1,0 +1,85 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { site } from '../../data/site';
+
+export async function getStaticPaths() {
+  const entries = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
+  return entries.map((entry, i) => ({
+    params: { slug: entry.id },
+    props: { entry, next: entries[(i + 1) % entries.length] },
+  }));
+}
+
+const { entry, next } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+const parts = [
+  { id: 'architecture', head: 'Architecture', points: d.architecture },
+  { id: 'implementation', head: 'Implementation', points: d.implementation },
+];
+---
+
+<Base title={`${d.title}, by Josiah Steve Sam`} description={d.description} current="work">
+  <section class="case-hero container" aria-labelledby="case-title">
+    <div class="case-hero__text">
+      <h1 class="case-hero__title" id="case-title">{d.title}</h1>
+      <p class="case-hero__line">{d.summary}</p>
+      <div class="hero__actions">
+        <a class="btn" href={`mailto:${site.email}`}>Write to Josiah</a>
+        <a class="btn btn--quiet" href={site.resumePrimary}>Resume</a>
+      </div>
+    </div>
+    <div class="case-hero__figure">
+      <p class:list={['entry__figure', { 'entry__figure--words': d.figureWords }]} data-reveal>{d.figure}</p>
+      <p class="entry__label">{d.figureLabel}</p>
+    </div>
+    <dl class="case-facts__list" aria-label="Entry facts">
+      <div><dt>Entry</dt><dd class="entry__num">{d.number}</dd></div>
+      <div><dt>Client</dt><dd>{d.client}</dd></div>
+      <div><dt>Stack</dt><dd><ul class="entry__stack">{d.stack.map((s) => <li>{s}</li>)}</ul></dd></div>
+    </dl>
+  </section>
+
+  <section class="case-part container" aria-labelledby="problem">
+    <h2 class="case-part__head" id="problem">Problem</h2>
+    <div class="case-part__body case-part__prose"><Content /></div>
+  </section>
+
+  {parts.map((p) => (
+    <section class="case-part container" aria-labelledby={p.id}>
+      <h2 class="case-part__head" id={p.id}>{p.head}</h2>
+      <dl class="case-part__body points">
+        {p.points.map((pt) => (
+          <div>
+            <dt>{pt.label}</dt>
+            <dd>{pt.text}</dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+  ))}
+
+  <section class="case-part container" aria-labelledby="impact">
+    <h2 class="case-part__head" id="impact">Impact</h2>
+    <div class="case-part__body">
+      <dl class="results">
+        {d.impact.map((r) => (
+          <div>
+            <dt>{r.label}</dt>
+            <dd>{r.figure}</dd>
+          </div>
+        ))}
+      </dl>
+      {d.impactNote && <p class="case-part__note">{d.impactNote}</p>}
+    </div>
+  </section>
+
+  <nav class="case-next container" aria-label="Next entry">
+    <a class="case-next__link" href={`/work/${next.id}/`}>
+      <span class="index__num">{next.data.number}</span>
+      <span class="case-next__name">Next entry: {next.data.title}</span>
+    </a>
+    <a class="case-next__all" href="/#work">All four entries</a>
+  </nav>
+</Base>

@@ -3,7 +3,7 @@
 # Josiah Steve Sam — portfolio
 
 Personal portfolio for Josiah, a software engineer working across full stack and applied AI.
-Nothing is built yet beyond the Astro starter. All planning is done; read these before touching code:
+The first build is done: homepage (`src/pages/index.astro`) and four case studies (`src/pages/work/[slug].astro`, content in `src/content/work/*.md`). Its open items (portrait, About text, screenshots, a TourExc result) are listed in `docs/content.md`. Read these before touching code:
 
 1. `docs/decisions.md` — every decision made so far (direction, structure, look, stack) and why.
 2. `docs/content.md` — the real content for every section, taken from the resumes. Use it verbatim; never invent facts.
